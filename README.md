@@ -70,8 +70,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-![react](https://blog.pucc.or.id/wp-content/uploads/2019/06/1-dLaDL-lSN0iprzmOpmM7zQ.png)
