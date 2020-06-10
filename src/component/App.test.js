@@ -35,6 +35,9 @@ describe('App', () => {
       });
     });
     
+    it('creates Gift component', () => {
+      expect(app.find('Gift').exists())
+    });
  
 });
 

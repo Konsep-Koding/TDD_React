@@ -16,16 +16,29 @@ describe('Gift', () => {
     expect(gift.state()).toEqual({ person: '', present: '' });
  });
 
- describe('When typing input', () => {
+ describe('When typing input person', () => {
     const person = 'Uncle'
 
     beforeEach(() => {
         gift.find('.input-person').simulate('change', {target:{value:person}})
     })
 
-    it('should updates the data in text input', () => {
+    it('should updates the data person in text input', () => {
         expect(gift.state().person).toEqual(person)
     });
+ });
+
+ describe('When typing present', () => {
+     const present = 'Car Or Travel Trip'
+
+     beforeEach(() => {
+         gift.find('.input-present').simulate('change', {target:{value:present}})
+     });
+
+     it('should updates the data present in text input ', () => {
+         expect(gift.state().present).toEqual(present)
+     });
+
  });
  
 

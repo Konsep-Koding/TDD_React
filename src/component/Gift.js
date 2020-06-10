@@ -14,8 +14,16 @@ import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootst
             <Form>
                 <FormGroup>
                     <FormControl
+                      placeholder="Person"
                       className='input-person'
                       onChange={event => this.setState({ person: event.target.value })}
+                    />
+                </FormGroup>
+                <FormGroup>
+                    <FormControl
+                      placeholder="Present"
+                      className='input-present'
+                      onChange={event => this.setState({ present: event.target.value })}
                     />
                 </FormGroup>
             </Form>
