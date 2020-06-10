@@ -8,6 +8,7 @@ const app = shallow(<App/>);
 
 
 describe('App', () => {
+  const id = 1
   it('Render', () => {
     expect(app).toMatchSnapshot();
     });
@@ -27,17 +28,24 @@ describe('App', () => {
       })
 
       it('Add new  `New Gift On To State` Gift', () => {
-        expect(app.state().gifts).toEqual([{id:1}])
+        expect(app.state().gifts).toEqual([{id}])
       });
       
       it('Add simulate 1', () => {
         expect(app.find('.gift-list').children().length).toEqual(1)
       });
+      it('creates Gift component', () => {
+        expect(app.find('Gift').exists())  
+      });
+
+      describe('When user remove added button', () => {
+        
+        beforeEach(() => {
+          app.instance().removeGift(id)
+        })
+        
+      });
     });
     
-    it('creates Gift component', () => {
-      expect(app.find('Gift').exists())
-    });
- 
 });
 
