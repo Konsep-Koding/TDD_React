@@ -10,7 +10,7 @@ const app = shallow(<App/>);
 it('Render', () => {
 expect(app).toMatchSnapshot();
 });
-
+ 
 it('should showing the List', () => {
   expect(app.state().gifts).toEqual([]) 
 });
@@ -21,4 +21,10 @@ it('Add new Fukin Gift', () => {
   expect(app.state().gifts).toEqual([{id:1}])
 });
 
+
+it('Add simulate 1', () => {
+  app.find('.btn-add').simulate('click')
+
+  expect(app.find('.gift-list').children().length).toEqual(2)
+});
 
