@@ -5,6 +5,11 @@ This Made By KonsepKoding.com  [Konsep Koding](https://www.konsepkoding.com/).
 ### `Approach For TDD in React can implement in React Native too`
 
 ![https://blog.pucc.or.id/wp-content/uploads/2019/06/1-dLaDL-lSN0iprzmOpmM7zQ.png](https://blog.pucc.or.id/wp-content/uploads/2019/06/1-dLaDL-lSN0iprzmOpmM7zQ.png)
+
+![https://raw.githubusercontent.com/Konsep-Koding/TDD_React/master/ss/Screen%20Shot%202020-06-11%20at%2011.46.00.png](https://raw.githubusercontent.com/Konsep-Koding/TDD_React/master/ss/Screen%20Shot%202020-06-11%20at%2011.46.00.png)
+
+![https://raw.githubusercontent.com/Konsep-Koding/TDD_React/master/ss/Screen%20Shot%202020-06-11%20at%2011.47.27.png](https://raw.githubusercontent.com/Konsep-Koding/TDD_React/master/ss/Screen%20Shot%202020-06-11%20at%2011.47.27.png)
+
 ## Available Scripts
 
 ### Testing
