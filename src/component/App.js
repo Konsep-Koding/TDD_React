@@ -26,7 +26,7 @@ import Gift from './Gift'
   render() {
     return (
     <div>
-      <h2>Gift It</h2>
+      <h2>Give It ❤️</h2>
       <div className='gift-list'>
         {this.state.gifts.map(gift => (
           <Gift
