@@ -43,7 +43,10 @@ describe('App', () => {
         beforeEach(() => {
           app.instance().removeGift(id)
         })
-        
+
+        it('should remove gift `State`', () => {
+          expect(app.state().gifts).toEqual([])
+        });
       });
     });
     

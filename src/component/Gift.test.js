@@ -7,7 +7,11 @@ Enzyme.configure({ adapter: new Adapter() });
 
 
 describe('Gift', () => {
- const gift = shallow(<Gift/>)
+// Making Mock
+ const mockRemove = jest.fn() 
+ const id = 1
+ const props = {gift:{id}, removeGift: mockRemove}
+ const gift = shallow(<Gift {...props}/>)
  it('should render screen', () => {
      expect(gift).toMatchSnapshot();
  });
@@ -38,9 +42,18 @@ describe('Gift', () => {
      it('should updates the data present in text input ', () => {
          expect(gift.state().present).toEqual(present)
      });
-
  });
  
+ describe('when clicking the `RemoveGift` Button', () => {
+     
+     beforeEach(() => {
+         gift.find('.btn-remove').simulate('click')
+     })
+
+     it('should calss remove Gift', () => {
+         expect(mockRemove).toHaveBeenCalledWith(id)
+     });
+ });
 
  
 });

@@ -18,13 +18,21 @@ import Gift from './Gift'
     this.setState({ gifts });
   }
 
+  removeGift = (id) => {
+    const gifts = this.state.gifts.filter(gift => gift.id !== id)
+
+    this.setState({gifts})
+  }
   render() {
     return (
     <div>
       <h2>Gift It</h2>
       <div className='gift-list'>
         {this.state.gifts.map(gift => (
-          <Gift key={gift.id}/>
+          <Gift
+           gift={gift}
+           removeGift={this.removeGift}
+           key={gift.id}/>
         ))}
       </div>
       <Button className="btn-add" onClick={this.addGift}> Add Gift </Button>
