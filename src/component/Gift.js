@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
+import { Form, FormGroup, FormControl, Button, FormLabel } from 'react-bootstrap';
  class Gift extends Component {
     constructor(props) {
         super(props);
@@ -12,6 +12,7 @@ import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootst
         return (
           <div className='gift'>
             <Form>
+            <FormLabel>Person</FormLabel>
                 <FormGroup>
                     <FormControl
                       placeholder="Person"
@@ -19,6 +20,7 @@ import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootst
                       onChange={event => this.setState({ person: event.target.value })}
                     />
                 </FormGroup>
+            <FormLabel>Present</FormLabel>
                 <FormGroup>
                     <FormControl
                       placeholder="Present"
@@ -27,6 +29,11 @@ import { Form, FormGroup, FormControl, ControlLabel, Button } from 'react-bootst
                     />
                 </FormGroup>
             </Form>
+            <Button 
+            onClick={() => this.props.removeGift(this.props.gift.id)}
+            className='btn-remove'>
+              Remove Gift
+            </Button>
           </div>
         )
     }
